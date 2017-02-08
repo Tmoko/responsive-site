@@ -1,0 +1,161 @@
+@import "compass";
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #FEFCEC;
+$subColor: #FD8C95;
+$keyColor: #7BC265;
+$fontColor: #4c4c4c;
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($baseColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.Ubuntu {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Header
+------------------------------------------------------------*/
+.main_img {
+  background-image: url("../img/main_img.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+
+}
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section{
+  padding: 30px 0;
+  .container{
+    width: 90%;
+    @extend .block-center;
+  }
+  h2{
+    @extend .Ubuntu;
+    font-size: 3.2rem;
+    background: $keyColor;
+  }
+}
+  
+// Sections
+#sections {
+
+  .container {
+    @include display-flex;
+    @include flex-direction(column);
+    
+  }
+  .section-box{
+    
+    background: #fff;
+    padding-bottom:20px;
+    margin-bottom: 20px;
+
+    
+      &:first-child{
+        margin-top: 30px;
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+  }
+  h3{
+    @extend .Ubuntu;
+    background: $subColor;
+    font-size: 1.8rem;
+    padding: 5px 0;
+    width: 150px;
+    font-weight: bold;
+    @extend .block-center;
+    @include border-radius(30px 5px 30px 5px);
+    
+  }
+   p{
+    width:90%;
+    @extend .block-center;
+   }
+
+}
+
+
+
+/* Footer
+------------------------------------------------------------*/
+footer{
+  background: $subColor;
+  padding:30px 0;
+    .container{
+       @extend .block-center;
+       width: 90%;
+      p.text-center{
+        @extend .block-center;
+        font-size: 1.6rem;
+        font-weight:bold;
+
+      }
+    }
+
+  .footer_btn{
+    @extend .block-center;
+    width: 180px;
+    height: 35px;
+    background: $keyColor;
+    text-align: center;
+    padding-top: 3px;
+    @include border-radius(6px, 6px);
+    @include box-shadow(8px, 8px);
+    margin-top:-15px;
+
+    p{
+      font-size: 1.8rem;
+      color: $baseColor;
+    
+    }
+  }
+}
+
+/* PC表示
+------------------------------------------------------------*/
+@media (min-width: 769px) {
+  .main_img {
+    height: 500px;
+  }
+}
