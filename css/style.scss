@@ -138,6 +138,7 @@ footer{
     background: $keyColor;
     text-align: center;
     padding-top: 3px;
+    border: solid 1px $baseColor;
     @include border-radius(6px, 6px);
     @include box-shadow(8px, 8px);
     margin-top:-15px;
@@ -168,6 +169,7 @@ footer{
       justify-content: space-between;
     
     .section-box{
+      width:33.3333%;
       margin:20px 0;
       padding: 0 20px 20px 20px;
       @include box-sizing(border-box);
