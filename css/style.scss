@@ -23,7 +23,6 @@ body{
 }
 
 a {
-  @include link-colors($baseColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
   text-decoration: none;
 }
 
@@ -69,7 +68,6 @@ section{
   h2{
     @extend .Ubuntu;
     font-size: 3.2rem;
-    background: $keyColor;
   }
 }
   
@@ -99,7 +97,7 @@ section{
   }
   h3{
     @extend .Ubuntu;
-    background: $subColor;
+    background: $keyColor;
     font-size: 1.8rem;
     padding: 5px 0;
     width: 150px;
@@ -155,7 +153,45 @@ footer{
 /* PC表示
 ------------------------------------------------------------*/
 @media (min-width: 769px) {
+ // main_img
   .main_img {
     height: 500px;
   }
+  
+ // Sections
+#sections {
+
+  .container {
+    width:90%;
+      @include display-flex;
+      @include flex-direction(row);
+      justify-content: space-between;
+    
+    .section-box{
+      margin:20px 0;
+      padding: 0 20px 20px 20px;
+      @include box-sizing(border-box);
+      margin-right: 20px;
+      
+      &:last-child{
+        margin-right: 0;
+      }
+
+
+    }
+  }
+  
+
+}
+
+// Footer
+footer{
+  .footer_btn:hover{
+    background:darken( $keyColor, 15% );
+    
+  
+  }
+  
+}
+  
 }

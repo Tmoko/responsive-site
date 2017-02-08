@@ -14,14 +14,7 @@ body {
   background-color: #FEFCEC; }
 
 a {
-  color: #FEFCEC;
   text-decoration: none; }
-  a:visited {
-    color: #5eaf45; }
-  a:hover {
-    color: #5eaf45; }
-  a:active {
-    color: #8bc977; }
 
 /* Align
 ------------------------------------------------------------*/
@@ -55,8 +48,7 @@ section {
   section .container {
     width: 90%; }
   section h2 {
-    font-size: 3.2rem;
-    background: #7BC265; }
+    font-size: 3.2rem; }
 
 #sections .container {
   display: -webkit-flex;
@@ -72,7 +64,7 @@ section {
   #sections .section-box:last-child {
     margin-bottom: 0; }
 #sections h3 {
-  background: #FD8C95;
+  background: #7BC265;
   font-size: 1.8rem;
   padding: 5px 0;
   width: 150px;
@@ -114,6 +106,26 @@ footer {
 ------------------------------------------------------------*/
 @media (min-width: 769px) {
   .main_img {
-    height: 500px; } }
+    height: 500px; }
+
+  #sections .container {
+    width: 90%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+    #sections .container .section-box {
+      margin: 20px 0;
+      padding: 0 20px 20px 20px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-right: 20px; }
+      #sections .container .section-box:last-child {
+        margin-right: 0; }
+
+  footer .footer_btn:hover {
+    background: #549d3e; } }
 
 /*# sourceMappingURL=style.css.map */
